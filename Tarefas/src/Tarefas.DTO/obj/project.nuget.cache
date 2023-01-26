@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7UiIGU1OtKj2w6S6J5O5dWMn2wIJNzO9fOA4xklITZz3gnrGogY7Vx1F9Sk+9gQBjpPoHrnVa73LvkTG1a+UTQ==",
+  "dgSpecHash": "ao5ZA7+kdzqj6H95dx7aSv7jp1OObuX9M0SG+WLtHc5xKkqvq3ewlVHo/6KVLVU93hEmYyaTE65UMV4Px1RCsg==",
   "success": true,
-  "projectFilePath": "D:\\bitbucket\\aspnet-bootcamp\\Tarefas\\src\\Tarefas.DTO\\Tarefas.DTO.csproj",
+  "projectFilePath": "/home/decom/Área de Trabalho/Iasmin/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

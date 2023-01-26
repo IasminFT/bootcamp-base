@@ -1,7 +1,9 @@
 @model Tarefas.Web.Models.Tarefa
 
-<form asp-action="Create">
+<form asp-action="Update">
 
+<input asp-for="Id"hidden/>
+    <input asp-for="Concluida"hidden/>
     <div class="form-group">
         <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
         <input asp-for="Titulo" class="form-control"/>
@@ -17,3 +19,4 @@
 </form>
 
 <a asp-controller="Tarefa" asp-action="Index">Voltar</a>
+
