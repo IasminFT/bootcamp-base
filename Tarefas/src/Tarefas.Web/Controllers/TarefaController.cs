@@ -7,11 +7,14 @@ namespace Tarefas.Web.Controllers
 {
     public class TarefaController : Controller
     {
-        public List<Tarefa> listaDeTarefa { get; set; }
+         private TarefaDAO tarefaDAO;
+
+        public List<TarefaViewModel> listaDeTarefa { get; set; }
 
         public TarefaController()
         {
             listaDeTarefa = new List<TarefaViewModel>();
+            tarefaDAO = new TarefaDAO();
         }
         
         public IActionResult Details(int id)
@@ -62,8 +65,11 @@ namespace Tarefas.Web.Controllers
                 Concluida = tarefa.Concluida
             };
 
-            var tarefaDAO = new TarefaDAO();
             tarefaDAO.Criar(tarefaDTO);
+
+            if(!ModelState.IsValid){
+                return View();
+            }  
 
             return RedirectToAction("Index");
         }
@@ -78,8 +84,11 @@ namespace Tarefas.Web.Controllers
                 Concluida = tarefa.Concluida
             };
 
-            var tarefaDAO = new TarefaDAO();
             tarefaDAO.Atualizar(tarefaDTO);
+
+            if(!ModelState.IsValid){
+                return View();
+            }  
 
             return RedirectToAction("Index");
         }
@@ -103,12 +112,7 @@ namespace Tarefas.Web.Controllers
 
             return RedirectToAction("Index");
         }
+
     }
     
-    private TarefaDAO tarefaDAO;
-
-    public TarefaController()
-    {
-        tarefaDAO = new TarefaDAO();
-    }
 }

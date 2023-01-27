@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "QZCHQZw3xSvzxLJSl1EXCYNYyUbdbaNW764/WBl6KfFN4sTdiMNPFnqqHng7VN9PNFGkgN/c2A3W4xFMBiErcA==",
+  "dgSpecHash": "X2P2natleBO/eezbHF6gdZj0q0lmmKIoiUWkLGVrE0GC8Tm0OzVyfF6+CGabzcAqwtqUgibrbUfHC4MGHAYhkQ==",
   "success": true,
-  "projectFilePath": "/home/decom/Área de Trabalho/Iasmin/bootcamp-base/Tarefas/src/Tarefas.Web/Tarefas.Web.csproj",
+  "projectFilePath": "C:\\Users\\iasmi\\OneDrive\\Área de Trabalho\\BootcampION\\bootcamp-base\\Tarefas\\src\\Tarefas.Web\\Tarefas.Web.csproj",
   "expectedPackageFiles": [
-    "/home/decom/.nuget/packages/dapper/2.0.78/dapper.2.0.78.nupkg.sha512",
-    "/home/decom/.nuget/packages/stub.system.data.sqlite.core.netstandard/1.0.113.2/stub.system.data.sqlite.core.netstandard.1.0.113.2.nupkg.sha512",
-    "/home/decom/.nuget/packages/system.data.sqlite.core/1.0.113.7/system.data.sqlite.core.1.0.113.7.nupkg.sha512"
+    "C:\\Users\\iasmi\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
+    "C:\\Users\\iasmi\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.113.2\\stub.system.data.sqlite.core.netstandard.1.0.113.2.nupkg.sha512",
+    "C:\\Users\\iasmi\\.nuget\\packages\\system.data.sqlite.core\\1.0.113.7\\system.data.sqlite.core.1.0.113.7.nupkg.sha512"
   ],
   "logs": []
 }

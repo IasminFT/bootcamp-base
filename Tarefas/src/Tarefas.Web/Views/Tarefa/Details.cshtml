@@ -2,20 +2,6 @@
 
 <form asp-action="Create">
 
-    <div class="form-group">
-        <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
-        <input asp-for="Titulo" class="form-control"/>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Descricao">@Html.DisplayNameFor(model => model.Descricao)</label>
-        <input asp-for="Descricao" class="form-control"/>
-    </div>
-        
-    <input type="submit" class="btn btn-primary" />
-        
-</form>
-
 <div class="form-group">
     <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
     <input asp-for="Titulo" class="form-control" disabled/>
@@ -29,3 +15,5 @@
 <a asp-controller="Tarefa" asp-action="Index" asp-route-id="@Model.Id">Voltar</a>
 <input asp-for="Id" hidden>
 <input asp-for="Concluida" hidden>
+
+</form>
