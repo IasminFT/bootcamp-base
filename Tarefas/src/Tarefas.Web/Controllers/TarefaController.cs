@@ -58,6 +58,10 @@ namespace Tarefas.Web.Controllers
         [HttpPost] //receber objetos, parametros mais complexos -> mais abrangente que o get
         public IActionResult Create(TarefaViewModel tarefa)
         {
+            if(!ModelState.IsValid){
+                return View();
+            }  
+
             var tarefaDTO = new TarefaDTO 
             {
                 Titulo = tarefa.Titulo,
@@ -67,15 +71,16 @@ namespace Tarefas.Web.Controllers
 
             tarefaDAO.Criar(tarefaDTO);
 
-            if(!ModelState.IsValid){
-                return View();
-            }  
-
-            return RedirectToAction("Index");
+            return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult Update(TarefaViewModel tarefa){
+
+            if(!ModelState.IsValid){
+                return View();
+            } 
+
             var tarefaDTO = new TarefaDTO
             {
                 Id = tarefa.Id,
@@ -86,14 +91,11 @@ namespace Tarefas.Web.Controllers
 
             tarefaDAO.Atualizar(tarefaDTO);
 
-            if(!ModelState.IsValid){
-                return View();
-            }  
-
             return RedirectToAction("Index");
         }
 
         public IActionResult Update(int id){
+
             var tarefaDTO = tarefaDAO.Consultar(id);
 
             var tarefa = new TarefaViewModel()

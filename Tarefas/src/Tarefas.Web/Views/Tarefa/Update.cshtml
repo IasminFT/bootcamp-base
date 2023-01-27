@@ -1,5 +1,11 @@
 @model Tarefas.Web.Models.TarefaViewModel
 
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
 <form asp-action="Update">
 
     <input asp-for="Id"hidden/>

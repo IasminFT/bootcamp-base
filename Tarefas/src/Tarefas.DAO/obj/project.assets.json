@@ -133,11 +133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/decom/Área de Trabalho/Iasmin/bootcamp-base/Tarefas/src/Tarefas.DAO/Tarefas.DAO.csproj",
+      "projectUniqueName": "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.DAO/Tarefas.DAO.csproj",
       "projectName": "Tarefas.DAO",
-      "projectPath": "/home/decom/Área de Trabalho/Iasmin/bootcamp-base/Tarefas/src/Tarefas.DAO/Tarefas.DAO.csproj",
+      "projectPath": "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.DAO/Tarefas.DAO.csproj",
       "packagesPath": "/home/decom/.nuget/packages/",
-      "outputPath": "/home/decom/Área de Trabalho/Iasmin/bootcamp-base/Tarefas/src/Tarefas.DAO/obj/",
+      "outputPath": "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.DAO/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/decom/.nuget/NuGet/NuGet.Config"
@@ -152,8 +152,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/decom/Área de Trabalho/Iasmin/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj": {
-              "projectPath": "/home/decom/Área de Trabalho/Iasmin/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj"
+            "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj": {
+              "projectPath": "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj"
             }
           }
         }

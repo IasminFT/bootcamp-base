@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ao5ZA7+kdzqj6H95dx7aSv7jp1OObuX9M0SG+WLtHc5xKkqvq3ewlVHo/6KVLVU93hEmYyaTE65UMV4Px1RCsg==",
+  "dgSpecHash": "tUlNkBTWKvvFO0kMTNcrwTqczS/ZoaHU2GkR3Kjukho34HgpmLDT0nhe+okf8dZaceXb41WXhdfY9Nbha4PuQQ==",
   "success": true,
-  "projectFilePath": "/home/decom/Área de Trabalho/Iasmin/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj",
+  "projectFilePath": "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

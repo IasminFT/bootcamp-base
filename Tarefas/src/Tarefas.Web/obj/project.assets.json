@@ -147,19 +147,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\iasmi\\.nuget\\packages\\": {}
+    "/home/decom/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iasmi\\OneDrive\\Área de Trabalho\\BootcampION\\bootcamp-base\\Tarefas\\src\\Tarefas.Web\\Tarefas.Web.csproj",
+      "projectUniqueName": "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.Web/Tarefas.Web.csproj",
       "projectName": "Tarefas.Web",
-      "projectPath": "C:\\Users\\iasmi\\OneDrive\\Área de Trabalho\\BootcampION\\bootcamp-base\\Tarefas\\src\\Tarefas.Web\\Tarefas.Web.csproj",
-      "packagesPath": "C:\\Users\\iasmi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iasmi\\OneDrive\\Área de Trabalho\\BootcampION\\bootcamp-base\\Tarefas\\src\\Tarefas.Web\\obj\\",
+      "projectPath": "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.Web/Tarefas.Web.csproj",
+      "packagesPath": "/home/decom/.nuget/packages/",
+      "outputPath": "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.Web/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\iasmi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/decom/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -171,11 +171,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\iasmi\\OneDrive\\Área de Trabalho\\BootcampION\\bootcamp-base\\Tarefas\\src\\Tarefas.DAO\\Tarefas.DAO.csproj": {
-              "projectPath": "C:\\Users\\iasmi\\OneDrive\\Área de Trabalho\\BootcampION\\bootcamp-base\\Tarefas\\src\\Tarefas.DAO\\Tarefas.DAO.csproj"
+            "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.DAO/Tarefas.DAO.csproj": {
+              "projectPath": "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.DAO/Tarefas.DAO.csproj"
             },
-            "C:\\Users\\iasmi\\OneDrive\\Área de Trabalho\\BootcampION\\bootcamp-base\\Tarefas\\src\\Tarefas.DTO\\Tarefas.DTO.csproj": {
-              "projectPath": "C:\\Users\\iasmi\\OneDrive\\Área de Trabalho\\BootcampION\\bootcamp-base\\Tarefas\\src\\Tarefas.DTO\\Tarefas.DTO.csproj"
+            "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj": {
+              "projectPath": "/home/decom/Área de Trabalho/bootcamp-base/Tarefas/src/Tarefas.DTO/Tarefas.DTO.csproj"
             }
           }
         }
@@ -208,7 +208,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/decom/.dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
