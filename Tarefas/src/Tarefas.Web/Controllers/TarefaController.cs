@@ -2,50 +2,59 @@ using Microsoft.AspNetCore.Mvc;
 using Tarefas.Web.Models;
 using Tarefas.DTO;
 using Tarefas.DAO;
+using AutoMapper;
 
 namespace Tarefas.Web.Controllers
 {
     public class TarefaController : Controller
     {
-         private TarefaDAO tarefaDAO;
-
         public List<TarefaViewModel> listaDeTarefa { get; set; }
 
-        public TarefaController()
+        private readonly ITarefaDAO _tarefaDAO;
+
+        private readonly IMapper _mapper;
+
+        public TarefaController(ITarefaDAO tarefaDAO, IMapper mapper)
         {
-            listaDeTarefa = new List<TarefaViewModel>();
-            tarefaDAO = new TarefaDAO();
+            _tarefaDAO = tarefaDAO;
+            _mapper = mapper;
         }
         
         public IActionResult Details(int id)
         {
-            var tarefaDTO = tarefaDAO.Consultar(id);
+            var tarefaDTO = _tarefaDAO.Consultar(id);
 
-            var tarefa = new TarefaViewModel()
+            var tarefa = _mapper.Map<TarefaViewModel>(tarefaDTO);
+
+            /*var tarefa = new TarefaViewModel()
             {
                 Id = tarefaDTO.Id,
                 Titulo = tarefaDTO.Titulo,
                 Descricao = tarefaDTO.Descricao,
                 Concluida = tarefaDTO.Concluida
-            };
+            };*/
 
             return View(tarefa);
         }
 
         public IActionResult Index()
         {   
-            var listaDeTarefasDTO = tarefaDAO.Consultar();
+            var listaDeTarefasDTO = _tarefaDAO.Consultar();
+
+            listaDeTarefa = new List<TarefaViewModel>();
 
             foreach (var tarefaDTO in listaDeTarefasDTO)  
             {
-                listaDeTarefa.Add(new TarefaViewModel()
+                listaDeTarefa.Add(_mapper.Map<TarefaViewModel>(tarefaDTO));
+                
+                /*listaDeTarefa.Add(new TarefaViewModel()
                 {
                     Id = tarefaDTO.Id,
                     Titulo = tarefaDTO.Titulo,
                     Descricao = tarefaDTO.Descricao,
                     Concluida = tarefaDTO.Concluida,
 
-                });
+                });*/
             }       
             return View(listaDeTarefa);
         }
@@ -62,14 +71,9 @@ namespace Tarefas.Web.Controllers
                 return View();
             }  
 
-            var tarefaDTO = new TarefaDTO 
-            {
-                Titulo = tarefa.Titulo,
-                Descricao = tarefa.Descricao,
-                Concluida = tarefa.Concluida
-            };
+            var tarefaDTO = _mapper.Map<TarefaDTO>(tarefa);
 
-            tarefaDAO.Criar(tarefaDTO);
+            _tarefaDAO.Criar(tarefaDTO);
 
             return View();
         }
@@ -81,36 +85,40 @@ namespace Tarefas.Web.Controllers
                 return View();
             } 
 
-            var tarefaDTO = new TarefaDTO
+            var tarefaDTO = _mapper.Map<TarefaDTO>(tarefa);
+
+            /*var tarefaDTO = new TarefaDTO
             {
                 Id = tarefa.Id,
                 Titulo = tarefa.Titulo,
                 Descricao = tarefa.Descricao,
                 Concluida = tarefa.Concluida
-            };
+            };*/
 
-            tarefaDAO.Atualizar(tarefaDTO);
+            _tarefaDAO.Atualizar(tarefaDTO);
 
             return RedirectToAction("Index");
         }
 
         public IActionResult Update(int id){
 
-            var tarefaDTO = tarefaDAO.Consultar(id);
+            var tarefaDTO = _tarefaDAO.Consultar(id);
 
-            var tarefa = new TarefaViewModel()
+            var tarefa = _mapper.Map<TarefaViewModel>(tarefaDTO);
+
+            /*var tarefa = new TarefaViewModel()
             {
                 Id = tarefaDTO.Id,
                 Titulo = tarefaDTO.Titulo,
                 Descricao = tarefaDTO.Descricao,
                 Concluida = tarefaDTO.Concluida
-            };
+            };*/
 
             return View(tarefa);
         }
 
         public IActionResult Delete(int id){
-            tarefaDAO.Excluir(id);
+            _tarefaDAO.Excluir(id);
 
             return RedirectToAction("Index");
         }

@@ -7,24 +7,30 @@
 }
 
 
+<div class="col-12">
+        <form asp-action="Create" class="row g-3">
+                
+            <h3>Administrador de Tarefas</h3>
 
-<form asp-action="Create">
-    <asp-validation-summary> 
-        <div class="form-group">
-            <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
-            <input asp-for="Titulo" class="form-control" asp-validation-for/>
-        </div>
+                @Html.ValidationSummary()
 
-        <div class="form-group">
-            <label asp-for="Descricao">@Html.DisplayNameFor(model => model.Descricao)</label>
-            <input asp-for="Descricao" class="form-control" asp-validation-for/>
-        </div>
+                <div class="form-group">
+                    <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
+                    <input asp-for="Titulo" class="form-control" asp-validation-for/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Descricao">@Html.DisplayNameFor(model => model.Descricao)</label>
+                    <input asp-for="Descricao" class="form-control" asp-validation-for/>
+                </div>
             
-        <input type="submit" class="btn btn-primary" />
-    </asp-validation-summary>
-</form>
+        </form>
+
+</div>
 
 
+<div class="col-12">
+    <input type="submit" class="btn btn-primary"/> <a class="btn btn-secondary" asp-controller="Tarefa" asp-action="Index">Voltar</a>
+</div>
 
-<a asp-controller="Tarefa" asp-action="Index">Voltar</a>
 

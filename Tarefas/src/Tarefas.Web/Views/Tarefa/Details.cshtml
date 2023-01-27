@@ -1,19 +1,26 @@
 @model Tarefas.Web.Models.TarefaViewModel
 
-<form asp-action="Create">
+<div class="col-12">
+    <form asp-action="Create" class="row g-3">
 
-<div class="form-group">
-    <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
-    <input asp-for="Titulo" class="form-control" disabled/>
+        <h3>Detalhes da Tarefa</h3>
+
+        <div class="form-group">
+            <label asp-for="Titulo">@Html.DisplayNameFor(model => model.Titulo)</label>
+            <input asp-for="Titulo" class="form-control" disabled/>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Descricao">@Html.DisplayNameFor(model => model.Descricao)</label>
+            <input asp-for="Descricao" class="form-control" disabled/>
+        </div>
+
+    </form>
 </div>
-
-<div class="form-group">
-    <label asp-for="Descricao">@Html.DisplayNameFor(model => model.Descricao)</label>
-    <input asp-for="Descricao" class="form-control" disabled/>
-</div>
-
-<a asp-controller="Tarefa" asp-action="Index" asp-route-id="@Model.Id">Voltar</a>
-<input asp-for="Id" hidden>
-<input asp-for="Concluida" hidden>
-
-</form>
+    
+    <div class="col-12">
+        <a asp-controller="Tarefa" asp-action="Index" asp-route-id="@Model.Id">Voltar</a>
+        <input asp-for="Id" hidden>
+        <input asp-for="Concluida" hidden>
+    </div>
+        

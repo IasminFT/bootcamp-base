@@ -9,36 +9,45 @@ using System.Collections.Generic;
 
 namespace Tarefas.DAO
 {
-    public class TarefaDAO
+    public interface ITarefaDAO
     {
-        private string DataSourceFile => Environment.CurrentDirectory + "AppTarefasDB.sqlite";
-        public SQLiteConnection Connection => new SQLiteConnection("DataSource="+ DataSourceFile);
-        
+        SQLiteConnection Connection { get; }
+
+        void Atualizar(TarefaDTO tarefa);
+        TarefaDTO Consultar(int id);
+        List<TarefaDTO> Consultar();
+        void Criar(TarefaDTO tarefa);
+        void Excluir(int id);
+    }
+
+    public class TarefaDAO : BaseDAO, ITarefaDAO
+    {
+
         public TarefaDAO()
         {
-            if(!File.Exists(DataSourceFile))
+            /*if (!File.Exists(DataSourceFile))
             {
                 CreateDatabase();
-            }
+            }*/
         }
 
-         public TarefaDTO Consultar(int id)
+        public TarefaDTO Consultar(int id)
         {
             using (var con = Connection)
             {
                 con.Open();
-                TarefaDTO result = con.Query<TarefaDTO>
+                TarefaDTO result = con.Query <TarefaDTO>
                 (
                     @"SELECT Id, Titulo, Descricao, Concluida FROM Tarefa
-                    WHERE Id = @Id", new{id}
+                    WHERE Id = @Id", new { id }
                 ).FirstOrDefault();
                 return result;
             }
         }
-        
+
         private void CreateDatabase()
         {
-            using(var con = Connection)
+            using (var con = Connection)
             {
                 con.Open();
                 con.Execute(
@@ -71,7 +80,7 @@ namespace Tarefas.DAO
             using (var con = Connection)
             {
                 con.Open();
-                con.Execute (
+                con.Execute(
                     @"UPDATE Tarefa
                     SET Titulo = @Titulo, Descricao = @Descricao, Concluida = @Concluida
                     WHERE Id = @Id;", tarefa
@@ -86,14 +95,14 @@ namespace Tarefas.DAO
                 con.Open();
                 con.Execute(
                    @"DELETE FROM Tarefa
-                   WHERE Id = @Id", new {id}
+                   WHERE Id = @Id", new { id }
                 );
             }
         }
 
-        public List <TarefaDTO>Consultar()
+        public List<TarefaDTO> Consultar()
         {
-            using(var con = Connection)
+            using (var con = Connection)
             {
                 con.Open();
                 var result = con.Query<TarefaDTO>(
@@ -102,6 +111,6 @@ namespace Tarefas.DAO
                 return result;
             }
         }
-        
+
     }
 }

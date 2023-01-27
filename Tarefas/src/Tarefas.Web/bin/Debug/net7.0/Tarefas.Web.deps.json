@@ -8,11 +8,24 @@
     ".NETCoreApp,Version=v7.0": {
       "Tarefas.Web/1.0.0": {
         "dependencies": {
+          "AutoMapper": "10.1.1",
           "Tarefas.DAO": "1.0.0",
           "Tarefas.DTO": "1.0.0"
         },
         "runtime": {
           "Tarefas.Web.dll": {}
+        }
+      },
+      "AutoMapper/10.1.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.1.1.0"
+          }
         }
       },
       "Dapper/2.0.78": {
@@ -23,6 +36,7 @@
           }
         }
       },
+      "Microsoft.CSharp/4.7.0": {},
       "Stub.System.Data.SQLite.Core.NetStandard/1.0.113.2": {
         "runtime": {
           "lib/netstandard2.1/System.Data.SQLite.dll": {
@@ -58,6 +72,7 @@
           "Stub.System.Data.SQLite.Core.NetStandard": "1.0.113.2"
         }
       },
+      "System.Reflection.Emit/4.7.0": {},
       "Tarefas.DAO/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.78",
@@ -81,12 +96,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/10.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
+      "path": "automapper/10.1.1",
+      "hashPath": "automapper.10.1.1.nupkg.sha512"
+    },
     "Dapper/2.0.78": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-vLPwL2HZXp/DN17Eu7sg6GMEj02alq7jcy6atn5Gv8i96b9Hu1UoxlCrhInUPfSFLQQiD8O7pdWAE1fdUEO/1Q==",
       "path": "dapper/2.0.78",
       "hashPath": "dapper.2.0.78.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "Stub.System.Data.SQLite.Core.NetStandard/1.0.113.2": {
       "type": "package",
@@ -101,6 +130,13 @@
       "sha512": "sha512-2DKMIxfZpIVzdMfx1dj9qvTm+0m0Mx6sN6CZXMQDNytU7Sk/JKo0Ox6mvHAicfHrQgqZbUZMzMMtLXD0kwmFfg==",
       "path": "system.data.sqlite.core/1.0.113.7",
       "hashPath": "system.data.sqlite.core.1.0.113.7.nupkg.sha512"
+    },
+    "System.Reflection.Emit/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "path": "system.reflection.emit/4.7.0",
+      "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
     },
     "Tarefas.DAO/1.0.0": {
       "type": "project",
